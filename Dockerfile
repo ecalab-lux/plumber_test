@@ -1,4 +1,4 @@
 FROM rstudio/plumber
 # install here all the packages you need
-# RUN
+RUN Rscript -e "install.packages('tidyverse')"
 
