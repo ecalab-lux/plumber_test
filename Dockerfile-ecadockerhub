@@ -8,6 +8,6 @@ WORKDIR /home/ruser
 RUN mkdir rlib
 # install here all the packages you need
 RUN R -e "install.packages('tidyverse', dependencies=TRUE, lib='rlib')"
+RUN R -e "install.packages('writexl', dependencies=TRUE, lib='rlib')"
 # add the new user repositories
-#RUN R -e "myPaths <- .libPaths()\nmyPaths <- c(myPaths, '/home/ruser/rlib')\n.libPaths(myPaths)"
 ENV R_LIBS_USER="/home/ruser/rlib"
