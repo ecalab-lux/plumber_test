@@ -5,8 +5,8 @@ services:
     restart: "no"
     build:
        context: .
-       dockerfile: Dockerfile 
-    image: ecalab/rstudio_plumber:localhost
+       dockerfile: Dockerfile-ecadockerhub
+    image: ecalab/rstudio_plumber:ecadockerhub
     container_name: plumber_test
     ports:
       - "8000:8000"
